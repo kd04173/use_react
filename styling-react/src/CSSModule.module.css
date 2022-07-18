@@ -1,4 +1,4 @@
-// 파일명_클래스명_해시값으로 자동설정
+/*파일명_클래스명_해시값으로 자동설정*/
 
 .wrapper {
   background: black;
@@ -13,7 +13,7 @@
   border: 1px solid black;
 }
 
-// 글로벌 CSS를 작성
+/*글로벌 CSS를 작성*/
 :global .something {
   font-weight: 800;
   color: aqua;
