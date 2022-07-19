@@ -7,9 +7,7 @@ import {
 } from 'react-icons/md';
 import cn from 'classnames';
 
-const TodoListItem = ({ todo, onRemove, onToggle }) => {
-  const { text, checked, id } = todo;
-
+const TodoListItem = ({ todo: { text, checked, id }, onRemove, onToggle }) => {
   return (
     <div className="TodoListItem">
       <div className={cn('checkbox', { checked })}>
