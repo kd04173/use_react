@@ -7,19 +7,26 @@ import {
 } from 'react-icons/md';
 import cn from 'classnames';
 
-const TodoListItem = ({ todo: { text, checked, id }, onRemove, onToggle }) => {
+const TodoListItem = ({
+  todo: { text, checked, id },
+  onRemove,
+  onToggle,
+  style,
+}) => {
   return (
-    <div className="TodoListItem">
-      <div className={cn('checkbox', { checked })}>
-        {checked ? (
-          <MdCheckBox onClick={() => onToggle(id)} />
-        ) : (
-          <MdCheckBoxOutlineBlank onClick={() => onToggle(id)} />
-        )}
-        <div className="text">{text}</div>
-      </div>
-      <div className="remove" onClick={() => onRemove(id)}>
-        <MdRemoveCircleOutline />
+    <div className="TodoListItem-virtualized" style={style}>
+      <div className="TodoListItem">
+        <div className={cn('checkbox', { checked })}>
+          {checked ? (
+            <MdCheckBox onClick={() => onToggle(id)} />
+          ) : (
+            <MdCheckBoxOutlineBlank onClick={() => onToggle(id)} />
+          )}
+          <div className="text">{text}</div>
+        </div>
+        <div className="remove" onClick={() => onRemove(id)}>
+          <MdRemoveCircleOutline />
+        </div>
       </div>
     </div>
   );
